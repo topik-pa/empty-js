@@ -1,0 +1,5 @@
+@keyframes arrow-go {
+    70%  { left:220px; }
+    71%  { left:-50px; }
+    100% { left:77px; }
+}

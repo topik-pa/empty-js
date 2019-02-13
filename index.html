@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="zxx">
+  <head>
+    <meta charset="utf-8">    
+
+    <meta name="description" content="A front-end test for Arnoldo Mondadori Editore by Marco Pavan">
+    <meta name="author" content="Marco Pavan - marcopavan.mp@gmail.com">
+    <meta name="keywords" content="test, project, marco, pavan, arnoldo, mondadori, editore, front end">
+    
+    <meta name='robots' content='index, follow' />
+
+    <link rel="canonical" href="https://topik-pa.github.io" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content='AME test project' />
+    <meta property="og:description" content="A test project for Arnoldo Mondadori Editore" />
+    <meta property="og:url" content="https://topik-pa.github.io" />
+		<meta property="og:image" content="images/saturn.jpg" />
+    <meta property="og:site_name" content="AME test project" /> 
+    
+    <title>Arnoldo Mondadori Editore - FE Test</title>
+
+    <!-- I prefer CDN for external files cause it is possible that this file is chached on client browser -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/arrow.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!--Favicons-->
+    <link rel="icon" type="image/x-icon" href="images/favicons/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="images/favicons/favicon-152.png">
+
+  </head>
+  <body>
+    <!-- Progress bar -->
+    <div id="progress">
+      <div>
+        <progress value="0" max="100"></progress>
+      </div>
+    </div>
+
+    <div class="container">
+      <main>
+        <!-- The 3 banners -->
+        <div id="banners">
+          <div class="banner boxed">1</div>
+          <div class="banner boxed">2</div>
+          <div class="banner boxed">3</div>
+        </div>
+
+        <!-- The green submenu -->
+        <div id="submenu">
+          <div class="wrap">
+            <div class="history">
+              <a href="#">Storia</a>
+            </div>
+            <div class="art-wrap">
+              <div class="art">
+                <a href="#">Arte</a>
+                <div id="arrow"><span class="icon-arrow-right"></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel -->
+        <section id="carousel">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide boxed">
+                <div>
+                  <h3>Lorem ipsum dolor sit amet, consectetur adipiscing</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut dapibus neque. Donec eu vulputate arcu.</p>
+                </div>
+              </div>
+              <div class="swiper-slide boxed">
+                <div>
+                  <h3>Lorem ipsum dolor sit amet, consectetur adipiscing</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut dapibus neque. Donec eu vulputate arcu.</p>
+                </div>
+              </div>
+              <div class="swiper-slide boxed">
+                <div>
+                  <h3>Lorem ipsum dolor sit amet, consectetur adipiscing</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut dapibus neque. Donec eu vulputate arcu.</p>
+                </div>
+              </div>
+              <div class="swiper-slide boxed">
+                <div>
+                  <h3>Lorem ipsum dolor sit amet, consectetur adipiscing</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut dapibus neque. Donec eu vulputate arcu.</p>
+                </div>
+              </div>
+              <div class="swiper-slide boxed">
+                <div>
+                  <h3>Lorem ipsum dolor sit amet, consectetur adipiscing</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut dapibus neque. Donec eu vulputate arcu.</p>
+                </div>
+              </div>
+              <div class="swiper-slide boxed">
+                <div>
+                  <h3>Lorem ipsum dolor sit amet, consectetur adipiscing</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut dapibus neque. Donec eu vulputate arcu.</p>
+                </div>
+              </div>
+              <div class="swiper-slide boxed">
+                <div>
+                  <h3>Lorem ipsum dolor sit amet, consectetur adipiscing</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut dapibus neque. Donec eu vulputate arcu.</p>
+                </div>
+              </div>
+            </div>
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+          <!-- Navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </section>
+
+        <!-- Checkbox selection -->
+        <div id="selection">
+          <div>
+            <label for="value-01">
+            <input type="checkbox" id="value-01">
+            <span></span>
+            Letteratura italiana
+            </label> 
+            <label for="value-02">
+            <input type="checkbox" id="value-02">
+            <span></span>
+            Storia
+            </label>
+            <label for="value-03">
+            <input type="checkbox" id="value-03">
+            <span></span>
+            Arte
+            </label> 
+            <label for="value-04">
+            <input type="checkbox" id="value-04">
+            <span></span>
+            Matematica
+            </label> 
+            <label for="value-05">
+            <input type="checkbox" id="value-05">
+            <span></span>
+            Filosofia
+            </label> 
+            <label for="value-06">
+            <input type="checkbox" id="value-06">
+            <span></span>
+            Chimica
+            </label> 
+            <label for="value-07">
+            <input type="checkbox" id="value-07">
+            <span></span>
+            Latino
+            </label> 
+            <label for="value-08">
+            <input type="checkbox" id="value-08">
+            <span></span>
+            Fisica
+            </label> 
+            <label for="value-09">
+            <input type="checkbox" id="value-09">
+            <span></span>
+            Scienze
+            </label> 
+            <label for="value-10">
+            <input type="checkbox" id="value-10">
+            <span></span>
+            Italiano
+            </label> 
+            <label for="value-11">
+            <input type="checkbox" id="value-11">
+            <span></span>
+            Biologia
+            </label> 
+            <label for="value-12">
+            <input type="checkbox" id="value-12">
+            <span></span>
+            Geografia
+            </label>                
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- JS here cause we want to render the page before anything else -->  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
+    <script src="js/library.js"></script>
+    <script src="js/scripts.js"></script>
+
+     <!-- Microdata... Google SEO suggestion-->
+		<script type="application/ld+json">
+      {
+        "@context": "http://schema.org/",
+        "@type": "WebSite",
+        "name": "Arnoldo Mondadori Editore - test project",
+        "url": "https://topik-pa.github.io"
+      }
+      </script>
+  </body>
+</html>

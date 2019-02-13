@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900');
+
+@font-face {font-family: "Georgia";
+    src: url("./../fonts/7dca09e227fdfe16908cebb4244589e4.eot"); /* IE9*/
+    src: url("./../fonts/7dca09e227fdfe16908cebb4244589e4.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("./../fonts/7dca09e227fdfe16908cebb4244589e4.woff2") format("woff2"), /* chrome、firefox */
+    url("./../fonts/7dca09e227fdfe16908cebb4244589e4.woff") format("woff"), /* chrome、firefox */
+    url("./../fonts/7dca09e227fdfe16908cebb4244589e4.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("./../fonts/7dca09e227fdfe16908cebb4244589e4.svg#Georgia") format("svg"); /* iOS 4.1- */
+}

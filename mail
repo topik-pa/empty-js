@@ -1,0 +1,44 @@
+Buongiorno Ivan,
+ho svolto il test, questi sono i dati per accedervi e una spiegazione schematica del lavoro svolto.
+
+Url: 
+https://topik-pa.github.io/
+
+Il codice sorgente (oltre che allegato alla presente) è scaricabile da:
+https://topik-pa.github.io/source/code.zip
+
+
+In generale:
+Non ho avuto modo di visionare il file sketch con il mio sistema, ho cercato comunque di rendere al meglio tutti gli aspetti della grafica fornitami.
+Oltre a seguire i requisiti specificati, mi sono focalizzato anche su aspetti riguardanti SEO, performance, modularizzazione e pulizia.
+
+
+Parte HTML:
+Meta tag descrittivi
+Open Graph (ho previsto anche una immagine di dimensioni adatte per lo share su Facebook)
+Microdata
+Favicon e Apple Touch icon
+Non ho incluso jQuery in quanto non necessario
+I file JS sono inclusi alla fine del file HTML per dare priorità ai contenuti della pagina
+
+
+Parte CSS:
+File css separati per tipologia
+Il font Georgia l'ho dovuto scaricare in quanto non liberamente disponibile
+Freccia bianca implementata in CSS
+La classe .boxed descrive e raccolgie insieme alcune proprietà comuni a più elementi presenti in pagina
+
+
+Parte JS:
+Ho previsto due file: una libreria riutilizzabile e un file specifico per la pagina in oggetto
+In entrambi i file ho utilizzato il module pattern per evitare global pollution
+Parlando di performance, ho utilizzato una funzione accessoria 'debouce' per evitare chiamate troppo frequenti alle gestore dello scroll listener
+
+
+La pagina è stata testata con il validatore ufficiale di HTML e CSS
+
+
+Grazie per il tuo tempo e buona giornata.
+
+Marco Pavan
+239.5698985

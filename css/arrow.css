@@ -1,0 +1,53 @@
+[class*="icon-arrow"] {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	color: #fff;
+	box-sizing: border-box;
+}
+
+[class*="icon-arrow"]:after,
+[class*="icon-arrow"]:before {
+	content: "";
+	box-sizing: border-box;
+}
+
+[class*="icon-arrow"] {
+	width: 20px;
+	height: 20px;
+	border-width: 2px 2px 0 0;
+	border-style: solid;
+	margin: 10px;
+}
+
+[class*="icon-arrow"]:before {
+	right: 0;
+	top: -2px;
+	position: absolute;
+	height: 2px;
+	box-shadow: inset 0 0 0 32px;
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	width: 130px;
+	-webkit-transform-origin: right top;
+	transform-origin: right top;
+}
+
+[class*="icon-arrow"][class*="-right"] {
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+[class*="icon-arrow"] {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	color: #fff;
+	box-sizing: border-box;
+}
+
+[class*="icon-arrow"]:after,
+[class*="icon-arrow"]:before {
+	content: "";
+	box-sizing: border-box;
+}
