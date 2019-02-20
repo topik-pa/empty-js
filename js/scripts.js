@@ -35,22 +35,43 @@ var AME = (function () {
     },
 
 
-    sendRequest: function (method='get', url, data) {
+    getLessons: function (method='get', url, data) {
+
+      //The template function
+      function templater(strings, ...keys) {
+        return function(data) {
+            let temp = strings.slice();
+            keys.forEach((key, i) => {
+                temp[i] = temp[i] + data[key];
+            });
+            return temp.join('');
+        }
+      };
+
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function(event) {
           if(xhr.readyState == 4) {
             if((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304) {
-              //alert(xhr.responseText);  
-              var item = JSON.parse(xhr.responseText);
-              var target = document.getElementById('target');
-              /*for (var i=0; i<items.length; i++) {
-                var elem = document.createElement('div');
-                elem.innerHTML = items.text;
-                target.appendChild(elem);
-              } */  
-              var elem = document.createElement('div');
-              elem.innerHTML = item.title;
-              target.appendChild(elem);      
+              var response = JSON.parse(xhr.responseText);
+              if(response.type === 'lessons') {
+                //The JSON is relative to Lessons          
+                var target = document.getElementById('target');
+                var template = templater`
+                  <label for="${'value'}">
+                    <input type="checkbox" id="${'value'}">
+                    <span></span>
+                    ${'text'}
+                  </label> 
+                `;
+                var lessons = response.items; 
+                for (var i=0; i<lessons.length; i++) {
+                  if (!lessons[i].valid) return //Do not print not valid lessons
+                  var labelTag = template(lessons[i]);
+                  var wrapper = document.createElement('div');
+                  wrapper.innerHTML = labelTag;
+                  target.appendChild(wrapper);
+                }        
+              }   
             }
             else {
               alert('Request was unsuccesful; ' + xhr.status);
@@ -62,10 +83,10 @@ var AME = (function () {
         xhr.ontimeout = function() {
             alert('Request did not return in 3 seconds');
         };
-        xhr.onprogress = function(event) {
+        /*xhr.onprogress = function(event) {
             var status = document.getElementById('status');
             status.innerHTML = 'Received ' + event.position + ' of ' + event.totalSize + ' Bytes';
-        };
+        };*/
         xhr.onerror = function() {
             alert('An error occured');
         }
@@ -73,7 +94,7 @@ var AME = (function () {
         xhr.send(JSON.stringify(data));
     },
 
-    
+
     headerEffect: function () {
       var limit = 50;
       var header = document.getElementById('header');      
@@ -96,5 +117,6 @@ var AME = (function () {
 
 
 AME.startSlider();
-AME.startProgressIndicator();
+//AME.startProgressIndicator();
 AME.headerEffect();
+AME.getLessons('get', '/server/url');

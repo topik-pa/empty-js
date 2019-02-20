@@ -1,0 +1,41 @@
+{
+    "type": "lessons",
+    "items": [
+        {
+            "id": 1,
+            "valid": true,
+            "value": "value-01",
+            "text": "Letteratura italiana"
+        },
+        {
+            "id": 2,
+            "valid": true,
+            "value": "value-02",
+            "text": "Storia"
+        },
+        {
+            "id": 3,
+            "valid": true,
+            "value": "value-03",
+            "text": "Arte"
+        },
+        {
+            "id": 4,
+            "valid": true,
+            "value": "value-04",
+            "text": "Matematica"
+        },
+        {
+            "id": 5,
+            "valid": true,
+            "value": "value-05",
+            "text": "Filosofia"
+        },
+        {
+            "id": 6,
+            "valid": false,
+            "value": "value-06",
+            "text": "Fashion"
+        }
+    ]
+}
