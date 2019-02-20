@@ -71,7 +71,24 @@ var AME = (function () {
         }
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         xhr.send(JSON.stringify(data));
-    } 
+    },
+
+    
+    headerEffect: function () {
+      var limit = 50;
+      var header = document.getElementById('header');      
+      var deabouncedScrollListener = AMELibrary.debounce(function () {
+        var scrollPosition = window.scrollY;
+        if(scrollPosition > limit) {
+          header.classList.add('compact');
+        }
+        else {
+          header.classList.remove('compact');
+        }
+      }, 10);
+      
+      window.addEventListener('scroll', deabouncedScrollListener);
+    }
 
   };
 
@@ -80,3 +97,4 @@ var AME = (function () {
 
 AME.startSlider();
 AME.startProgressIndicator();
+AME.headerEffect();
