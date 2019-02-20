@@ -32,6 +32,23 @@ var AME = (function () {
       }, 10);
       
       window.addEventListener('scroll', deabouncedScrollListener);
+    },
+
+
+    headerEffect: function () {
+      var limit = 150;
+      var header = document.getElementById('header');      
+      var deabouncedScrollListener = AMELibrary.debounce(function () {
+        var scrollPosition = window.scrollY;
+        if(scrollPosition > limit) {
+          header.classList.add('compact');
+        }
+        else {
+          header.classList.remove('compact');
+        }
+      }, 50);
+      
+      window.addEventListener('scroll', deabouncedScrollListener);
     }
 
   };
@@ -41,3 +58,4 @@ var AME = (function () {
 
 AME.startSlider();
 AME.startProgressIndicator();
+AME.headerEffect();

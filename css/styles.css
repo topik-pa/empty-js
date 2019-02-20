@@ -11,7 +11,9 @@ body {
     position: fixed;
     background-color: #404c51;
     width: 100vw;
+    height: 70px;
     z-index: 99;
+    top: 0;
 }
 
 #progress div {
@@ -43,6 +45,41 @@ body {
 /* Progress bar */
 
 
+/* Header */
+#header {
+    /*margin-top: 70px;*/
+    height: 60px;
+    background-color: #7ab700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #ffffff;
+    font-size: 2rem;
+    padding: 10px 0;
+    font-weight: bold;
+    letter-spacing: 3px;
+    z-index: 99;
+
+    /*More readable*/
+    text-shadow:0 0 1px transparent;
+    text-rendering: optimizeLegibility ;
+
+    /*Effect*/
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    transition: all .8s ease-out;
+
+}
+
+#header.compact {
+    height: 30px;
+}
+/* Header */
+
+
 
 .container {
     margin: 0 auto;
@@ -58,10 +95,11 @@ h3, p {
 /* Some properties shared by all boxed-like elements */
 .boxed {
     background-color: #ffffff;
-    box-shadow: 0px 0px 10px #dddddd;
-    border-radius: 3px;
+    box-shadow: 0px 0px 20px #dddddd;
+    border-radius: 6px;
     margin-bottom: 2rem;
     color: #262626;
+    border: 1px solid rgba(38, 38, 38, 0.1);
 }
 
 
@@ -90,6 +128,10 @@ h3, p {
     padding: 0 1rem;
     margin-bottom: 3rem;
     font-size: 4rem;
+    /*background-image: url("/images/saturn.jpg"), linear-gradient(to right, #7ab700 20%, #3e5d00);*/
+    background-image: linear-gradient(to right, #7ab700 20%, #3e5d00);
+    background-repeat: no-repeat;
+    /*background-position: 10% 10%;*/
 }
 
 #submenu a {
