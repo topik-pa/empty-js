@@ -109,6 +109,12 @@ var AME = (function () {
       }, 10);
       
       window.addEventListener('scroll', deabouncedScrollListener);
+    },
+
+    startLazyLoader: function() {
+      var myLazyLoad = new LazyLoad({
+        elements_selector: ".lazy"
+    });
     }
 
   };
@@ -120,3 +126,4 @@ AME.startSlider();
 //AME.startProgressIndicator();
 AME.headerEffect();
 AME.getLessons('get', '/server/url');
+AME.startLazyLoader();

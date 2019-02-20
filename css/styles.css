@@ -283,6 +283,15 @@ h3, p {
 /* Checkbox selection */
 
 
+/*Gallery*/
+#gallery {
+    text-align: center;
+}
+#gallery img {
+    margin-bottom: 20px;
+}
+/*Gallery*/
+
 
 @media screen and (min-width: 700px) {
     
