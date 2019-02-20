@@ -62,7 +62,7 @@ body {
     z-index: 99;
 
     /*More readable*/
-    text-shadow:0 0 1px transparent;
+    text-shadow: 0 0 1px transparent;
     text-rendering: optimizeLegibility ;
 
     /*Effect*/
@@ -70,7 +70,7 @@ body {
     top: 0;
     right: 0;
     left: 0;
-    transition: all .8s ease-out;
+    transition: all .4s cubic-bezier(.61,.42,.68,.82);
 
 }
 
@@ -88,14 +88,14 @@ body {
 
 /* Improve readability */
 h3, p {
-    text-shadow:0 0 1px transparent;
+    text-shadow: 0 0 1px transparent;
     text-rendering: optimizeLegibility;
 }
 
 /* Some properties shared by all boxed-like elements */
 .boxed {
     background-color: #ffffff;
-    box-shadow: 0px 0px 20px #dddddd;
+    box-shadow: 0px 0px 15px #dddddd;
     border-radius: 6px;
     margin-bottom: 2rem;
     color: #262626;
@@ -114,6 +114,10 @@ h3, p {
     text-align: center;
     font-size: 4rem;
     padding: 1rem;
+    cursor: pointer;
+}
+#banners .banner:hover {
+    box-shadow: 0px 0px 20px #cccccc;
 }
 #banners .banner:last-child {
     order: -1;
@@ -197,10 +201,12 @@ h3, p {
 #carousel .swiper-button-next {
     display: none;
     right: -45px;
+    outline: none;
 }
 #carousel .swiper-button-prev {
     display: none;
     left: -45px;
+    outline: none;
 }
 
 #carousel .swiper-slide div {

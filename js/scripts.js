@@ -36,7 +36,7 @@ var AME = (function () {
 
 
     headerEffect: function () {
-      var limit = 150;
+      var limit = 50;
       var header = document.getElementById('header');      
       var deabouncedScrollListener = AMELibrary.debounce(function () {
         var scrollPosition = window.scrollY;
@@ -46,7 +46,7 @@ var AME = (function () {
         else {
           header.classList.remove('compact');
         }
-      }, 50);
+      }, 10);
       
       window.addEventListener('scroll', deabouncedScrollListener);
     }
