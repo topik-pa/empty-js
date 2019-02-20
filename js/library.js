@@ -1,6 +1,7 @@
 //All the library functiona are collected inside AMELibrary
 var AMELibrary = (function () {
     return {
+
         debounce: function (func, wait, immediate) {
             var timeout;
             return function () {
@@ -15,6 +16,7 @@ var AMELibrary = (function () {
                 timeout = setTimeout(later, wait);
                 if (callNow) func.apply(context, args);
             };
-      }
+        }
+
     }; 
 })();
