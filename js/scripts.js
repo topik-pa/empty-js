@@ -34,20 +34,18 @@ var AME = (function () {
       window.addEventListener('scroll', deabouncedScrollListener);
     },
 
+    templater: function(strings, ...keys) {
+      return function(data) {
+        let temp = strings.slice();
+        keys.forEach((key, i) => {
+            temp[i] = temp[i] + data[key];
+        });
+        return temp.join('');
+      }
+    },
+
 
     getLessons: function (method='get', url, data) {
-
-      //The template function
-      function templater(strings, ...keys) {
-        return function(data) {
-            let temp = strings.slice();
-            keys.forEach((key, i) => {
-                temp[i] = temp[i] + data[key];
-            });
-            return temp.join('');
-        }
-      };
-
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function(event) {
           if(xhr.readyState == 4) {
@@ -56,7 +54,8 @@ var AME = (function () {
               if(response.type === 'lessons') {
                 //The JSON is relative to Lessons          
                 var target = document.getElementById('target');
-                var template = templater`
+
+                var template = AME.templater`
                   <label for="${'value'}">
                     <input type="checkbox" id="${'value'}">
                     <span></span>
